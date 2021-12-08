@@ -22,7 +22,7 @@ $ npx sitemap-merger sitemap.xml subdir/other-sitemap.xml build/sitemap.xml --fo
 const sitemapMerger = require("sitemap-merger");
 
 console.log(
-  sitemapMerger.merger(
+  sitemapMerger.merge(
     "base-xml-sitemap-as-string",
     "secondary-xml-sitemap-as-string",
     { prettyPrint: true }
