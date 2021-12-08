@@ -25,7 +25,7 @@ console.log(
   sitemapMerger.merge(
     "base-xml-sitemap-as-string",
     "secondary-xml-sitemap-as-string",
-    { prettyPrint: true }
+    { format: true }
   )
 );
 ```
