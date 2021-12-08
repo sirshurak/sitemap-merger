@@ -1,9 +1,10 @@
+#!/usr/bin/env node
+
 import { program } from "commander";
 import { defaultMergerOptions, mergeFromFilesToFile } from "./index";
 
 const dispatch = (base, second, outFile, options) => {
   const entryOptions = Object.assign({}, defaultMergerOptions, options);
-  console.log(entryOptions);
   mergeFromFilesToFile(base, second, outFile, entryOptions);
 
   console.log(`Merged sitemap to "${outFile}"`);
