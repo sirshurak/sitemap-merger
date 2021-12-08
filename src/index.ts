@@ -3,11 +3,11 @@ import { writeFileSync, readFileSync } from "fs";
 import beautify from "xml-beautifier";
 
 export interface MergerOptions {
-  prettyPrint: boolean;
+  format: boolean;
 }
 
 export const defaultMergerOptions: MergerOptions = {
-  prettyPrint: false,
+  format: false,
 };
 
 export function merge(
@@ -37,7 +37,7 @@ export function merge(
   toAdd.forEach((add) => queryDoc1("urlset").append(add));
 
   const result = queryDoc1.html();
-  return options?.prettyPrint ? beautify(result) : result;
+  return options?.format ? beautify(result) : result;
 }
 export function mergeToFile(
   sitemap1: string,

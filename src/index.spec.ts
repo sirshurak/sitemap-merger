@@ -48,7 +48,7 @@ describe("merge test", () => {
   });
 
   it("should merge files and pretty print", () => {
-    const result = merge(file1, file2, { prettyPrint: true });
+    const result = merge(file1, file2, { format: true });
     expect(
       cheerio.load(result, {
         xmlMode: true,
